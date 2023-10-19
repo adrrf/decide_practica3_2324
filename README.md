@@ -1,5 +1,8 @@
 Plataforma voto electrónico educativa
 =====================================
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b89fb8ddad5e462aa5909c4961074d9f)](https://app.codacy.com/gh/adrrf/decide_practica3_2324?utm_source=github.com&utm_medium=referral&utm_content=adrrf/decide_practica3_2324&utm_campaign=Badge_Grade)
+
 execute
 
 El objetivo de este proyecto es implementar una plataforma de voto
