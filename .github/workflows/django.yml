@@ -1,20 +1,23 @@
 name: Python application
 
-on: [push]
-  
+on:
+  push:
+    branches: 
+      - release
+  workflow_call:
+    secrets: 
+      CODACY_PROJECT_TOKEN: 
+        required: true
+
 
 jobs:
   build:
-    strategy:
-      matrix:
-        pyversion: ['3.10.12', '3.11']
-        postgresversion: ['postgres:14.9', 'postgres:15.4']
 
     runs-on: ubuntu-latest
 
     services:
       postgres:
-        image: ${{ matrix.postgresversion }}
+        image: postgres:14.9
         env:
           POSTGRES_USER: decide
           POSTGRES_PASSWORD: decide
@@ -26,7 +29,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.pyversion }}}
+    - name: Set up Python 3.10.12
       uses: actions/setup-python@v4
       with:
         python-version: 3.10.12

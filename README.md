@@ -1,6 +1,5 @@
 Plataforma voto electrónico educativa
 =====================================
-execute pull request mamabicho
 
 El objetivo de este proyecto es implementar una plataforma de voto
 electrónico seguro, que cumpla una serie de garantías básicas, como la
